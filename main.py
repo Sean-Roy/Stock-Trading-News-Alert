@@ -53,8 +53,9 @@ else:
 diff_percent = round((difference / float(yesterday_closing_price)) * 100)
 print(diff_percent)
 
-# If difference percentage is greater than 5 then get articles:
-if abs(diff_percent) > 5:
+# TODO: Set the desired percentage difference.
+# If difference percentage is greater than 5%, then get articles:
+if abs(diff_percent) > 5:  # ADJ as desired.
     news_params = {
         "apiKey": NEWS_API_KEY,
         "qInTitle": COMPANY_NAME,
